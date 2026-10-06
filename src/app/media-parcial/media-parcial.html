@@ -1,0 +1,26 @@
+<<section class="container">
+  <h1>Média Parcial</h1>
+  <form>
+    <div>
+      <label for="b1">Bimestre 1</label>
+      <input id="b1" type="number" #b1>
+    </div>
+    <div>
+      <label for="b2">Bimestre 2</label>
+      <input id="b2" type="number" #b2>
+    </div>
+    <div>
+      <input 
+        type="button" 
+        value="Calcular" 
+        (click)="calcularMediaParcial(+b1.value, +b2.value)">
+    </div>
+  </form>
+  
+  <div>
+    @if (mediaParcial !== undefined) {
+      <p>Média parcial: {{ mediaParcial }}</p>
+      <p>Situação do estudante: <strong>{{ mensagemSituacao }}</strong></p>
+    }
+  </div>
+</section>

@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MediaParcial } from './media-parcial/media-parcial';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.scss',
+  standalone: true,
+  imports: [RouterOutlet, MediaParcial],
   templateUrl: './app.html',
+  styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('projeto-media');
+export class AppComponent {
+  title = 'projeto-media';
 }

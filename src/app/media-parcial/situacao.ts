@@ -1,0 +1,1 @@
+export type Situacao = 'CURSANDO' | 'APROVADO' | 'AVALIACAO_FINAL' | 'REPROVADO';
